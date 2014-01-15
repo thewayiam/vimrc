@@ -1,0 +1,32 @@
+execute pathogen#infect()
+syntax on
+filetype on
+filetype plugin on
+let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
+nnoremap <silent> <F5> :NERDTree<CR>
+let NERDTreeIgnore = ['\.pyc$','\~$']
+set clipboard=unnamed
+" Mouse and backspace
+set mouse=a " on OSX press ALT and click
+set bs=2 " make backspace behave like normal againdx
+" Showing line numbers and length
+set number " show line numbers
+" Useful settings
+set history=700
+set undolevels=700
+" Real programmers don't use TABs but spaces
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set expandtab
+" Make search case insensitive
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+" Disable stupid backup and swap files - they trigger too many events
+" for file system watchers
+set nobackup
+set nowritebackup
+set noswapfile
