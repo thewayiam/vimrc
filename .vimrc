@@ -2,6 +2,7 @@ execute pathogen#infect()
 syntax on
 filetype on
 filetype plugin on
+filetype indent on
 let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
 nnoremap <silent> <F5> :NERDTree<CR>
 let NERDTreeIgnore = ['\.pyc$','\~$']
@@ -30,3 +31,6 @@ set smartcase
 set nobackup
 set nowritebackup
 set noswapfile
+" auto delete trailing whitespace
+autocmd BufWritePre *.py :%s/\s\+$//e
+autocmd BufWritePre *.html :%s/\s\+$//e
