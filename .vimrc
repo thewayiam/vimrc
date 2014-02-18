@@ -1,4 +1,5 @@
 execute pathogen#infect()
+call pathogen#runtime_append_all_bundles()
 syntax on
 filetype on
 filetype plugin on
@@ -34,3 +35,5 @@ set noswapfile
 " auto delete trailing whitespace
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
+autocmd BufWritePre *.ls :%s/\s\+$//e
+autocmd BufWritePre *.jade :%s/\s\+$//e
