@@ -37,3 +37,5 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
 autocmd BufWritePre *.ls :%s/\s\+$//e
 autocmd BufWritePre *.jade :%s/\s\+$//e
+" vim flake8
+autocmd BufWritePost *.py call Flake8()
